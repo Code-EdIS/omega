@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -11,21 +10,27 @@
 
 <link rel="stylesheet" href="./css/style.css">
 <link rel="stylesheet" href="./css/animations.css">
-
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
-<body class="bg-[#0f0f0f] text-white">
+<body class="bg-[#0f0f0f] text-white overflow-x-hidden">
 
-<header class="header">
-  <div class="container-custom">
+<!-- HEADER UGUALE A INDEX -->
+<header class="fixed top-0 left-0 w-full z-50 backdrop-blur-md border-b border-white/10">
+  <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
 
-    <a href="index.html" class="logo">OMEGA</a>
+    <a href="index.html" class="text-2xl font-semibold tracking-wide">OMEGA</a>
 
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="brands.html">Brands</a>
-      <a href="contact.html">Contact</a>
+    <nav class="hidden md:flex gap-8 text-sm uppercase tracking-[0.2em]">
+      <a href="./index.html" data-i18n="nav.home"></a>
+      <a href="./brands.html" data-i18n="nav.brands"></a>
+      <a href="./contact.html" data-i18n="nav.contact"></a>
     </nav>
+
+    <button id="lang-toggle"
+      class="border border-white/20 px-4 py-2 text-xs uppercase hover:bg-white hover:text-black transition">
+      EN
+    </button>
 
   </div>
 </header>
@@ -34,39 +39,39 @@
 
   <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 w-full">
 
+    <!-- INFO -->
     <div class="reveal">
-
       <p class="section-label">06 · CONTACT</p>
 
-      <h1 class="text-6xl font-semibold mb-10">
-        Let's talk.
-      </h1>
+      <h1 class="text-6xl font-semibold mb-10">Let's talk.</h1>
 
-      <div class="space-y-6 text-gray-300">
-
+      <div class="space-y-6 text-gray-300 mb-10">
         <p>amministrazione@omegagroupsrl.net</p>
         <p>commerciale@omegagroupsrl.net</p>
         <p>+39 350 0844201</p>
         <p>Via Campomorone, 53 — Roma</p>
-
       </div>
 
+      <!-- MAIL ACTIONS -->
+      <div class="flex flex-col gap-4">
+
+        <!-- EMAIL APP -->
+        <a href="mailto:amministrazione@omegagroupsrl.net?subject=Richiesta informazioni Omega Group"
+           class="border border-white/20 px-6 py-3 text-center hover:bg-white hover:text-black transition">
+          Apri app email
+        </a>
+
+        <!-- GMAIL -->
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=amministrazione@omegagroupsrl.net&su=Richiesta%20Omega%20Group&body=Salve,%20vorrei%20ricevere%20informazioni..."
+           target="_blank"
+           class="border border-white/20 px-6 py-3 text-center hover:bg-white hover:text-black transition">
+          Apri Gmail
+        </a>
+
+      </div>
     </div>
 
-    <form class="space-y-6 reveal">
-
-      <input type="text" placeholder="Name" class="input-style">
-      <input type="email" placeholder="Email" class="input-style">
-      <textarea rows="6" placeholder="Message" class="input-style"></textarea>
-
-      <button class="submit-btn">
-        Send Message
-      </button>
-
-    </form>
-
   </div>
-
 </section>
 
 <script src="./js/translations.js"></script>
