@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Omega Group</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/animations.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-[#0f0f0f] text-white overflow-x-hidden">
+
+<header class="fixed top-0 left-0 w-full z-50 backdrop-blur-md border-b border-white/10">
+  <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+
+    <a href="index.html" class="text-2xl font-semibold tracking-wide">
+      OMEGA
+    </a>
+
+    <nav class="hidden md:flex gap-8 text-sm uppercase tracking-[0.2em]">
+      <a href="./index.html" class="nav-link" data-i18n="nav.home"></a>
+      <a href="./brands.html" class="nav-link" data-i18n="nav.brands"></a>
+      <a href="./contact.html" class="nav-link" data-i18n="nav.contact"></a>
+    </nav>
+
+    <button id="lang-toggle" class="border border-white/20 px-4 py-2 text-xs uppercase hover:bg-white hover:text-black transition">
+      EN
+    </button>
+
+  </div>
+</header>
+
+<section class="hero min-h-screen flex items-center px-6">
+  <div class="max-w-7xl mx-auto w-full">
+
+    <div class="max-w-4xl reveal">
+
+      <p class="uppercase tracking-[0.3em] text-sm text-gray-400 mb-6">
+        Omega Group S.R.L.
+      </p>
+
+      <h1 class="text-5xl md:text-8xl font-semibold leading-none mb-10">
+        <span data-i18n="hero.title1"></span><br>
+        <span class="text-gray-500" data-i18n="hero.title2"></span>
+      </h1>
+
+      <p class="max-w-2xl text-lg text-gray-300 leading-relaxed mb-10"
+      data-i18n="hero.description"></p>
+
+      <a href="./contact.html"
+      class="inline-flex items-center gap-3 border border-white/20 px-8 py-4 hover:bg-white hover:text-black transition-all duration-500">
+        <span data-i18n="hero.cta"></span>
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="py-32 px-6 border-t border-white/10">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20">
+
+    <div class="reveal">
+      <p class="section-label">01 · WHO WE ARE</p>
+      <h2 class="section-title" data-i18n="about.title"></h2>
+    </div>
+
+    <div class="reveal">
+      <p class="section-text"
+      data-i18n="about.text"></p>
+    </div>
+
+  </div>
+</section>
+
+<section class="py-32 px-6 bg-[#141414]">
+  <div class="max-w-7xl mx-auto">
+
+    <div class="mb-20 reveal">
+      <p class="section-label">02 · MISSION</p>
+      <h2 class="text-4xl md:text-6xl max-w-4xl leading-tight"
+      data-i18n="mission.title"></h2>
+    </div>
+
+    <p class="max-w-4xl text-gray-400 text-xl leading-relaxed reveal"
+    data-i18n="mission.text"></p>
+
+  </div>
+</section>
+
+<section class="py-32 px-6">
+  <div class="max-w-7xl mx-auto">
+
+    <div class="mb-20 reveal">
+      <p class="section-label">03 · SERVICES</p>
+      <h2 class="section-title" data-i18n="services.title"></h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+      <div class="service-card reveal">
+        <h3 data-i18n="services.card1.title"></h3>
+        <p data-i18n="services.card1.text"></p>
+      </div>
+
+      <div class="service-card reveal">
+        <h3 data-i18n="services.card2.title"></h3>
+        <p data-i18n="services.card2.text"></p>
+      </div>
+
+      <div class="service-card reveal">
+        <h3 data-i18n="services.card3.title"></h3>
+        <p data-i18n="services.card3.text"></p>
+      </div>
+
+      <div class="service-card reveal">
+        <h3 data-i18n="services.card4.title"></h3>
+        <p data-i18n="services.card4.text"></p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<footer class="border-t border-white/10 py-10 px-6">
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-6 text-sm text-gray-400">
+
+    <div>
+      Omega Group S.R.L.
+    </div>
+
+    <div>
+      Via Campomorone 53 · Roma
+    </div>
+
+    <div>
+      P.IVA 16375491004
+    </div>
+
+  </div>
+</footer>
+
+<script src="./js/translations.js"></script>
+<script src="./js/i18n.js"></script>
+<script src="./js/animations.js"></script>
+<script src="./js/main.js"></script>
+
+</body>
+</html>
