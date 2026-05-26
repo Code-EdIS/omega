@@ -7,6 +7,7 @@
 
   <script src="https://cdn.tailwindcss.com"></script>
 
+
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/animations.css">
 
@@ -16,27 +17,78 @@
 
 <body class="bg-[#0f0f0f] text-white overflow-x-hidden">
 
+  <img src="../assets/code.png" alt="codice" class="fixed right-[-20%] top-1/2 -translate-y-1/2 opacity-[0.20] rotate-[-5deg] pointer-events-none select-none z-[-1]">
+  </img>
+
 <header class="fixed top-0 left-0 w-full z-50 backdrop-blur-md border-b border-white/10">
   <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
 
-    <a href="index.html" class="text-2xl font-semibold tracking-wide">
-      OMEGA
-    </a>
+  <!-- LOGO -->
+  <a href="index.html" class="flex w-24 items-center">
+  <img src="../assets/OmegaLogo.png" alt="logo" class="block object-contain">
+</a>
 
-    <nav class="hidden md:flex gap-8 text-sm uppercase tracking-[0.2em]">
-      <a href="./index.html" class="nav-link" data-i18n="nav.home"></a>
-      <a href="./brands.html" class="nav-link" data-i18n="nav.brands"></a>
-      <a href="./contact.html" class="nav-link" data-i18n="nav.contact"></a>
-    </nav>
+  <!-- DESKTOP NAV -->
+  <nav class="hidden md:flex gap-8 text-sm uppercase tracking-[0.2em]">
 
-    <button id="lang-toggle" class="border border-white/20 px-4 py-2 text-xs uppercase hover:bg-white hover:text-black transition">
+    <a href="./index.html"
+      class="nav-link"
+      data-i18n="nav.home"></a>
+
+    <a href="./brands.html"
+      class="nav-link"
+      data-i18n="nav.brands"></a>
+
+    <a href="./contact.html"
+      class="nav-link"
+      data-i18n="nav.contact"></a>
+
+  </nav>
+
+  <!-- RIGHT SIDE -->
+  <div class="flex items-center gap-4">
+
+    <!-- LANGUAGE -->
+    <button id="lang-toggle"
+      class="border border-white/20 px-4 py-2 text-xs uppercase hover:bg-white hover:text-black transition">
       EN
     </button>
 
+    <!-- HAMBURGER -->
+    <button id="menu-toggle"
+      class="md:hidden flex flex-col gap-1.5">
+
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+
+    </button>
+
   </div>
+
+</div>
+
+<!-- MOBILE MENU -->
+<div id="mobile-menu"
+  class="fixed inset-0 bg-[#0f0f0f] z-40 flex flex-col items-center justify-center gap-10
+  translate-x-full transition-transform duration-500 md:hidden">
+
+  <a href="./index.html"
+    class="mobile-link"
+    data-i18n="nav.home"></a>
+
+  <a href="./brands.html"
+    class="mobile-link"
+    data-i18n="nav.brands"></a>
+
+  <a href="./contact.html"
+    class="mobile-link"
+    data-i18n="nav.contact"></a>
+
+</div>
 </header>
 
-<section class="hero min-h-screen flex items-center px-6">
+<section class="hero min-h-screen flex items-center px-6 lg:py-[10%]">
   <div class="max-w-7xl mx-auto w-full">
 
     <div class="max-w-4xl reveal">
@@ -72,7 +124,7 @@
     </div>
 
     <div class="reveal">
-      <p class="section-text"
+      <p class="section-text bg-white/5 backdrop-blur-md rounded-xl p-4"
       data-i18n="about.text"></p>
     </div>
 
@@ -129,12 +181,10 @@
   </div>
 </section>
 
-<footer class="border-t border-white/10 py-10 px-6">
+<footer class="border-t border-white/10 py-10 px-6 backdrop-blur-md">
   <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-6 text-sm text-gray-400">
 
-    <div>
-      Omega Group S.R.L.
-    </div>
+    <img src="../assets/OmegaLogo.png" alt="logo" class=" w-24 block object-contain">
 
     <div>
       Via Campomorone 53 · Roma
@@ -151,6 +201,7 @@
 <script src="./js/i18n.js"></script>
 <script src="./js/animations.js"></script>
 <script src="./js/main.js"></script>
+<script src="./js/mobile-menu.js"></script>
 
 </body>
 </html>

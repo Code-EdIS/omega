@@ -89,14 +89,23 @@ nav a:hover{
 }
 
 .brand-card{
-  border:1px solid rgba(255,255,255,.08);
-  height:180px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:1.5rem;
-  transition:.4s;
-  background:#141414;
+  position: relative;
+  overflow: hidden;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  font-weight: 500;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  transition: all .5s ease;
+
+  cursor: pointer;
 }
 
 .brand-card:hover{
@@ -122,3 +131,92 @@ nav a:hover{
   background:white;
   color:black;
 }
+
+/* HAMBURGER */
+
+.hamburger-line{
+  width:24px;
+  height:1.5px;
+  background:white;
+  transition:.4s;
+}
+
+/* MOBILE MENU */
+
+.mobile-link{
+  font-size:2rem;
+  text-transform:uppercase;
+  letter-spacing:.2em;
+  transition:.4s;
+}
+
+.mobile-link:hover{
+  opacity:.5;
+}
+
+/* MENU OPEN */
+
+.menu-open #mobile-menu{
+  transform:translateX(0);
+}
+
+/* ANIMATION */
+
+.menu-open .hamburger-line:nth-child(1){
+  transform:translateY(7px) rotate(45deg);
+}
+
+.menu-open .hamburger-line:nth-child(2){
+  opacity:0;
+}
+
+.menu-open .hamburger-line:nth-child(3){
+  transform:translateY(-7px) rotate(-45deg);
+}
+
+/* LIGHT GLOW ON HOVER */
+.brand-card:hover{
+  transform: translateY(-10px) scale(1.02);
+  border-color: rgba(255,255,255,0.25);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+}
+
+/* ===== BIG LETTER BACKGROUND ===== */
+
+.icona-text{
+  position: absolute;
+  right: -15px;
+  top: 50%;
+  transform: translateY(-50%) rotate(-15deg);
+
+  font-size: 7rem;
+  font-weight: 800;
+
+  opacity: 0.05;
+
+  pointer-events: none;
+  user-select: none;
+
+  transition: all .5s ease;
+}
+
+/* LETTERA CHE “SI ACCENDE” */
+.brand-card:hover .icona-text{
+  opacity: 0.12;
+  transform: translateY(-50%) rotate(-10deg) scale(1.05);
+}
+
+/* ===== VARIANTI COLORI ===== */
+
+.apple .icona-text { color: white; }
+.samsung .icona-text { color: #4f8cff; }
+.microsoft .icona-text { color: #00a2ed; }
+.logitech .icona-text { color: #9ca3af; }
+.asus .icona-text { color: #ffffff; }
+.dell .icona-text { color: #3b82f6; }
+.hp .icona-text { color: #60a5fa; }
+.sony .icona-text { color: #ffffff; }
+.canon .icona-text { color: #ef4444; }
+.dyson .icona-text { color: #a3a3a3; }
+.lg .icona-text { color: #ef4444; }
+.msi .icona-text { color: #f97316; }

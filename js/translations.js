@@ -47,8 +47,30 @@ const translations = {
         title:"Prezzi trasparenti",
         text:"Nessun costo nascosto."
       }
-    }
+    },
 
+    brands:{
+      title:"I nostri brand",
+      description:"Collaboriamo con alcuni dei marchi più affidabili e riconosciuti del settore tecnologico."
+    },
+
+    contact:{
+      title:"Parliamone.",
+      description:"Per informazioni commerciali, collaborazioni o richieste amministrative, contatta direttamente il nostro team.",
+
+      admin:{
+        label:"Amministrazione",
+        text:"Supporto amministrativo, fatture, documenti e informazioni aziendali."
+      },
+
+      commercial:{
+        label:"Commerciale",
+        text:"Richieste prodotti, collaborazioni e partnership commerciali."
+      },
+
+      buttonMail:"Apri app email",
+      buttonGmail:"Apri Gmail"
+    }
   },
 
   en: {
@@ -98,8 +120,30 @@ const translations = {
         title:"Transparent pricing",
         text:"No hidden costs."
       }
-    }
+    },
 
+    brands:{
+      title:"Our Brands",
+      description:"We collaborate with some of the most reliable and recognized brands in the technology sector."
+    },
+
+    contact:{
+      title:"Let's talk.",
+      description:"For commercial information, partnerships or administrative requests, contact our team directly.",
+
+      admin:{
+        label:"Administration",
+        text:"Administrative support, invoices, documents and company information."
+      },
+
+      commercial:{
+        label:"Commercial",
+        text:"Product requests, collaborations and commercial partnerships."
+      },
+
+      buttonMail:"Open Mail App",
+      buttonGmail:"Open Gmail"
+    }
   }
 
 };

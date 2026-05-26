@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -8,76 +9,190 @@
 
 <script src="https://cdn.tailwindcss.com"></script>
 
+
 <link rel="stylesheet" href="./css/style.css">
 <link rel="stylesheet" href="./css/animations.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body class="bg-[#0f0f0f] text-white overflow-x-hidden">
 
-<!-- HEADER UGUALE A INDEX -->
 <header class="fixed top-0 left-0 w-full z-50 backdrop-blur-md border-b border-white/10">
   <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
 
-    <a href="index.html" class="text-2xl font-semibold tracking-wide">OMEGA</a>
+  <!-- LOGO -->
+  <a href="index.html" class="text-2xl font-semibold tracking-wide">
+    <img src="../assets/OmegaLogo.png" alt="logo" class="h-14 md:h-16 w-auto object-contain"></img>
+  </a>
 
-    <nav class="hidden md:flex gap-8 text-sm uppercase tracking-[0.2em]">
-      <a href="./index.html" data-i18n="nav.home"></a>
-      <a href="./brands.html" data-i18n="nav.brands"></a>
-      <a href="./contact.html" data-i18n="nav.contact"></a>
-    </nav>
+  <!-- DESKTOP NAV -->
+  <nav class="hidden md:flex gap-8 text-sm uppercase tracking-[0.2em]">
 
+    <a href="./index.html"
+      class="nav-link"
+      data-i18n="nav.home"></a>
+
+    <a href="./brands.html"
+      class="nav-link"
+      data-i18n="nav.brands"></a>
+
+    <a href="./contact.html"
+      class="nav-link"
+      data-i18n="nav.contact"></a>
+
+  </nav>
+
+  <!-- RIGHT SIDE -->
+  <div class="flex items-center gap-4">
+
+    <!-- LANGUAGE -->
     <button id="lang-toggle"
       class="border border-white/20 px-4 py-2 text-xs uppercase hover:bg-white hover:text-black transition">
       EN
     </button>
 
+    <!-- HAMBURGER -->
+    <button id="menu-toggle"
+      class="md:hidden flex flex-col gap-1.5">
+
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+
+    </button>
+
   </div>
+
+</div>
+
+<!-- MOBILE MENU -->
+<div id="mobile-menu"
+  class="fixed inset-0 bg-[#0f0f0f] z-40 flex flex-col items-center justify-center gap-10
+  translate-x-full transition-transform duration-500 md:hidden">
+
+  <a href="./index.html"
+    class="mobile-link"
+    data-i18n="nav.home"></a>
+
+  <a href="./brands.html"
+    class="mobile-link"
+    data-i18n="nav.brands"></a>
+
+  <a href="./contact.html"
+    class="mobile-link"
+    data-i18n="nav.contact"></a>
+
+</div>
 </header>
 
 <section class="min-h-screen flex items-center px-6 py-40">
 
-  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 w-full">
+  <div class="max-w-7xl mx-auto w-full">
 
-    <!-- INFO -->
-    <div class="reveal">
+    <div class="mb-20 reveal">
+
       <p class="section-label">06 · CONTACT</p>
 
-      <h1 class="text-6xl font-semibold mb-10">Let's talk.</h1>
+      <h1 class="text-5xl md:text-7xl font-semibold leading-none mb-8"
+      data-i18n="contact.title"></h1>
 
-      <div class="space-y-6 text-gray-300 mb-10">
-        <p>amministrazione@omegagroupsrl.net</p>
-        <p>commerciale@omegagroupsrl.net</p>
-        <p>+39 350 0844201</p>
-        <p>Via Campomorone, 53 — Roma</p>
-      </div>
+      <p class="max-w-2xl text-gray-400 text-lg leading-relaxed"
+      data-i18n="contact.description"></p>
 
-      <!-- MAIL ACTIONS -->
-      <div class="flex flex-col gap-4">
+    </div>
 
-        <!-- EMAIL APP -->
-        <a href="mailto:amministrazione@omegagroupsrl.net?subject=Richiesta informazioni Omega Group"
-           class="border border-white/20 px-6 py-3 text-center hover:bg-white hover:text-black transition">
-          Apri app email
+    <div class="grid md:grid-cols-2 gap-8">
+
+      <!-- ADMIN -->
+      <div class="border border-white/10 bg-[#141414] p-10 reveal">
+
+        <p class="text-sm uppercase tracking-[0.2em] text-gray-500 mb-6"
+        data-i18n="contact.admin.label"></p>
+
+        <h2 class="text-xl md:text-3xl font-semibold mb-6 break-all">
+          amministrazione@omegagroupsrl.net
+        </h2>
+
+        <p class="text-gray-400 leading-relaxed mb-10"
+        data-i18n="contact.admin.text"></p>
+
+        <div class="flex flex-col sm:flex-row gap-4">
+
+        <!-- MAIL APP -->
+        <a
+          href="mailto:amministrazione@omegagroupsrl.net?subject=Omega Group Request"
+          class="inline-flex items-center justify-center gap-3 border border-white/20 px-6 py-3 hover:bg-white hover:text-black transition-all duration-500"
+          data-i18n="contact.buttonMail">
         </a>
 
         <!-- GMAIL -->
-        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=amministrazione@omegagroupsrl.net&su=Richiesta%20Omega%20Group&body=Salve,%20vorrei%20ricevere%20informazioni..."
-           target="_blank"
-           class="border border-white/20 px-6 py-3 text-center hover:bg-white hover:text-black transition">
-          Apri Gmail
+        <a
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=amministrazione@omegagroupsrl.net&su=Omega%20Group%20Request"
+          target="_blank"
+          class="inline-flex items-center justify-center gap-3 border border-white/10 bg-white/5 px-6 py-3 hover:bg-white hover:text-black transition-all duration-500"
+          data-i18n="contact.buttonGmail">
         </a>
 
       </div>
+
+      </div>
+
+      <!-- COMMERCIAL -->
+      <div class="border border-white/10 bg-[#141414] p-10 reveal">
+
+        <p class="text-sm uppercase tracking-[0.2em] text-gray-500 mb-6"
+        data-i18n="contact.commercial.label"></p>
+
+        <h2 class="text-xl md:text-3xl font-semibold mb-6 break-all">
+          commerciale@omegagroupsrl.net
+        </h2>
+
+        <p class="text-gray-400 leading-relaxed mb-10"
+        data-i18n="contact.commercial.text"></p>
+
+        <div class="flex flex-col sm:flex-row gap-4">
+
+        <!-- MAIL APP -->
+        <a
+          href="mailto:commerciale@omegagroupsrl.net?subject=Commercial Request"
+          class="inline-flex items-center justify-center gap-3 border border-white/20 px-6 py-3 hover:bg-white hover:text-black transition-all duration-500"
+          data-i18n="contact.buttonMail">
+        </a>
+
+        <!-- GMAIL -->
+        <a
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=commerciale@omegagroupsrl.net&su=Commercial%20Request"
+          target="_blank"
+          class="inline-flex items-center justify-center gap-3 border border-white/10 bg-white/5 px-6 py-3 hover:bg-white hover:text-black transition-all duration-500"
+          data-i18n="contact.buttonGmail">
+        </a>
+
+      </div>
+
+      </div>
+
+    </div>
+
+    <div class="mt-20 text-gray-500 text-sm reveal">
+
+      <p>+39 350 0844201</p>
+      <p>Via Campomorone 53 · Roma</p>
+      <p>P.IVA 16375491004</p>
+
     </div>
 
   </div>
+
 </section>
 
 <script src="./js/translations.js"></script>
 <script src="./js/i18n.js"></script>
 <script src="./js/animations.js"></script>
 <script src="./js/main.js"></script>
+<script src="./js/mobile-menu.js"></script>
 
 </body>
 </html>

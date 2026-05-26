@@ -1,33 +1,42 @@
-let currentLang = 'it';
+let currentLang = localStorage.getItem("lang") || "it";
 
-const toggle = document.getElementById('lang-toggle');
+const toggle = document.getElementById("lang-toggle");
 
-function setLanguage(lang){
+function setLanguage(lang) {
+  document.querySelectorAll("[data-i18n]").forEach(el => {
 
-  document.querySelectorAll('[data-i18n]').forEach(el => {
-
-    const keys = el.dataset.i18n.split('.');
-
+    const keys = el.dataset.i18n.split(".");
     let value = translations[lang];
 
     keys.forEach(key => {
-      value = value[key];
+      value = value?.[key];
     });
 
-    el.textContent = value;
+    if (value !== undefined) {
+      el.textContent = value;
+    }
 
   });
 
+  // aggiorna bottone
+  if (toggle) {
+    toggle.textContent = lang === "it" ? "EN" : "IT";
+  }
+
+  // salva lingua
+  localStorage.setItem("lang", lang);
 }
 
-toggle.addEventListener('click', () => {
+// toggle lingua
+if (toggle) {
+  toggle.addEventListener("click", () => {
 
-  currentLang = currentLang === 'it' ? 'en' : 'it';
+    currentLang = currentLang === "it" ? "en" : "it";
 
-  toggle.textContent = currentLang === 'it' ? 'EN' : 'IT';
+    setLanguage(currentLang);
 
-  setLanguage(currentLang);
+  });
+}
 
-});
-
+// init
 setLanguage(currentLang);
