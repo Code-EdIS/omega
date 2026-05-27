@@ -144,7 +144,7 @@ nav a:hover{
 /* MOBILE MENU */
 
 .mobile-link{
-  font-size:2rem;
+  font-size:1rem;
   text-transform:uppercase;
   letter-spacing:.2em;
   transition:.4s;
